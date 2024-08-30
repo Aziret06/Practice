@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/tasks/" method="get" style="padding: 10px">
+  {{search_form.as_p}}
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+{% for task in tasks %}
+<div class="card" style="width: 18rem; margin: 15px">
+  <div class="card-body" style="">
+    <h5 class="card-title">{{task.title}}</h5>
+    <a href="/tasks/{{task.id}}" class="btn btn-primary">Detailed view</a>
+  </div>
+
+</div>
+{%endfor%}
+{% endblock %}

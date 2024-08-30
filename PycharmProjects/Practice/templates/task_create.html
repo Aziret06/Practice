@@ -1,0 +1,8 @@
+{%extends "base.html"%}
+{%block content%}
+<form method="post" style="padding: 15px;">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button style="padding: 15px" type="submit">Create</button>
+</form>
+{%endblock%}
